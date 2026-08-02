@@ -1,0 +1,33 @@
+# TemperPack
+> Sustainable, bio-based packaging solutions designed to replace plastic and EPS foam in cold chain and protective shipping.
+
+## Core Platforms
+* [ClimaCell](https://www.temperpack.com/solutions/climacell/) - High-performance, curbside recyclable thermal liners for cold chain.
+* [Green Cell Foam](https://www.temperpack.com/solutions/green-cell-foam/) - Certified compostable, starch-based insulation with EPS-level performance.
+* [WaveKraft](https://www.temperpack.com/solutions/wavekraft/) - Paper-based cushioning produced on-demand for speed and waste reduction.
+
+## Products by Type
+* [Cushioning](https://www.temperpack.com/products/cushioning/) - Protective interior packaging for fragile goods.
+* [Mailers](https://www.temperpack.com/products/mailers/) - Insulated and non-insulated sustainable mailing solutions.
+* [Qualified Shippers](https://www.temperpack.com/products/qualified-shippers/) - Pre-validated thermal systems for strict temperature control.
+* [Stock Shippers](https://www.temperpack.com/products/stock-shippers/) - Standardized sustainable shipping containers.
+
+## Industry Applications
+* [Life Sciences](https://www.temperpack.com/industries/life-sciences/) - Validated thermal systems for pharma, diagnostics, and biologics.
+* [Food & Beverage](https://www.temperpack.com/industries/food-beverage/) - Freshness protection for frozen, chilled, and ambient supply chains.
+* [Pet & Vet](https://www.temperpack.com/industries/pet-vet/) - Reliable insulation for prescription diets and animal health vaccines.
+* [Wine](https://www.temperpack.com/industries/wine/) - Protective, sustainable shipping for viticulture and distributors.
+* [Packaging Distributors](https://www.temperpack.com/industries/packaging-distributors/) - Scalable platforms for fulfillment and distribution partners.
+
+## Science & Testing
+* [The Proving Ground](https://www.temperpack.com/science/the-proving-ground/) - In-house, ISTA-certified lab for thermal and mechanical stress testing.
+* [Sustainability](https://www.temperpack.com/sustainability/) - Data on carbon footprint reduction and material circularity.
+
+## Resources
+* [Recycling & Disposal Guides](https://www.temperpack.com/resources/educational/) - Detailed end-of-life instructions for all material types.
+* [Case Studies](https://www.temperpack.com/resources/case-studies/) - Real-world implementation examples including Caroline's Cakes and WebstaurantStore.
+* [Articles & Insights](https://www.temperpack.com/resources/articles/) - Technical updates and industry news regarding sustainable logistics.
+
+## Contact & Support
+* [Get in Touch](https://www.temperpack.com/contact/) - Speak with a packaging specialist for custom solutions.
+* [About TemperPack](https://www.temperpack.com/about/) - Company history, ISO-certified facilities, and mission.

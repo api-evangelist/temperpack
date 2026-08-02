@@ -1,0 +1,115 @@
+generated: '2026-08-02'
+method: probed
+source: live HTTP probes of every TemperPack host discovered from apis.yml and the website
+summary:
+  documents_found: 0
+  note: >-
+    No RFC 8615 well-known discovery document is published on any TemperPack host.
+    www.temperpack.com (Webflow) answers every /.well-known/* path with a 404 HTML
+    body reading "Invalid .well-known request". store.temperpack.com (nopCommerce)
+    answers HTTP 200 for every path with its login-page HTML — a single-page/login
+    catch-all, not a real document; every 200 on that host was rejected as a false
+    positive after body inspection.
+hosts:
+- host: https://www.temperpack.com
+  platform: Webflow
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/apple-app-site-association
+    status: 404
+  - path: /llms.txt
+    status: 200
+    file: ../llms/temperpack-llms.txt
+    note: real llms.txt, saved verbatim to llms/
+  - path: /robots.txt
+    status: 200
+  - path: /sitemap.xml
+    status: 200
+    note: 66 URLs, none developer/API related
+- host: https://store.temperpack.com
+  platform: nopCommerce
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    accepted: false
+    reason: HTML login page (catch-all), not a security.txt
+  - path: /.well-known/agent-card.json
+    status: 200
+    accepted: false
+    reason: HTML login page (catch-all), not an AgentCard JSON object
+  - path: /llms.txt
+    status: 200
+    accepted: false
+    reason: HTML login page (catch-all)
+  - path: /robots.txt
+    status: 200
+- host: https://temperpack.netlify.app
+  note: portal application host linked from https://www.temperpack.com/portal
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /llms.txt
+    status: 404
+x-contract-discovery:
+  openapi:
+    found: false
+    probed:
+    - {url: 'https://www.temperpack.com/openapi.json', status: 404}
+    - {url: 'https://www.temperpack.com/swagger.json', status: 404}
+    - {url: 'https://api.temperpack.com/openapi.json', status: 'DNS NXDOMAIN'}
+    - {url: 'https://store.temperpack.com/swagger/v1/swagger.json', status: 200, accepted: false, reason: HTML login page}
+    - {url: 'https://store.temperpack.com/openapi.json', status: 200, accepted: false, reason: HTML login page}
+    - {url: 'https://store.temperpack.com/api-docs', status: 200, accepted: false, reason: HTML login page}
+    - {url: 'https://store.temperpack.com/OData/v1/$metadata', status: 200, accepted: false, reason: HTML login page}
+    - {url: 'https://temperpack.netlify.app/openapi.json', status: 404}
+  graphql:
+    found: false
+    note: no /graphql surface discovered on any host
+  mcp:
+    found: false
+    note: no hosted or documented MCP server
+  a2a_agent_card:
+    found: false
+    note: >-
+      /.well-known/agent-card.json and /.well-known/agent.json probed on
+      www.temperpack.com, store.temperpack.com and temperpack.netlify.app.
+      No JSON AgentCard returned on any host. Per pipeline policy nothing was
+      authored in a2a/.
+  dns:
+    probed_subdomains:
+    - {host: api.temperpack.com, result: NXDOMAIN}
+    - {host: developer.temperpack.com, result: NXDOMAIN}
+    - {host: docs.temperpack.com, result: NXDOMAIN}
+    - {host: portal.temperpack.com, result: NXDOMAIN}
+    - {host: app.temperpack.com, result: NXDOMAIN}
+    - {host: my.temperpack.com, result: NXDOMAIN}
+    - {host: login.temperpack.com, result: NXDOMAIN}
+    - {host: status.temperpack.com, result: 'CNAME temperpack.freshstatus.io'}
+  status_page:
+    found: false
+    note: >-
+      status.temperpack.com is CNAMEd to temperpack.freshstatus.io but no status
+      page is provisioned — the Freshstatus app returns {"detail":"Status page not
+      found"} (404) in its __NEXT_DATA__ payload behind an HTTP 200 shell, and HTTPS
+      on the custom domain fails TLS hostname validation (cert CN=*.freshstatus.io).
+      No StatusPage pointer emitted.
+  packages:
+    found: false
+    registries_searched: [npm, PyPI, RubyGems, Packagist, NuGet, crates.io]
