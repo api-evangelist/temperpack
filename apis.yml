@@ -14,6 +14,17 @@ description: 'TemperPack is a Richmond, Virginia based sustainable packaging man
   portal for order tracking, thermal testing results, billing and WaveKraft analytics,
   and an e-commerce store, but publishes no public developer API, OpenAPI definition
   or developer portal as of August 2026.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/692f4e704f45e3ae7cca374b/69dd81f54fcc9c80c039810d_temperpack-webclip.png
 url: https://raw.githubusercontent.com/api-evangelist/temperpack/refs/heads/main/apis.yml
 x-type: company
