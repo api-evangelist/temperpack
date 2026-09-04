@@ -25,6 +25,18 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://cdn.prod.website-files.com/692f4e704f45e3ae7cca374b/69dd81f54fcc9c80c039810d_temperpack-webclip.png
 url: https://raw.githubusercontent.com/api-evangelist/temperpack/refs/heads/main/apis.yml
 x-type: company
